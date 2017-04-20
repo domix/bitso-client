@@ -1,1 +1,5 @@
 .gradle
+bitso-client.iml
+bitso-client.ipr
+bitso-client.iws
+build
