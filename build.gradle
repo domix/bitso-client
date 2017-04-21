@@ -2,14 +2,14 @@ apply plugin: 'java-library'
 apply plugin: 'idea'
 
 repositories {
-    jcenter()
+  jcenter()
 }
 
 dependencies {
-    api 'org.apache.commons:commons-math3:3.6.1'
+  api 'org.apache.commons:commons-math3:3.6.1'
 
-    implementation 'com.google.guava:guava:21.0'
+  implementation 'com.google.guava:guava:21.0'
 
-    testImplementation 'junit:junit:4.12'
+  testImplementation 'junit:junit:4.12'
 }
 
