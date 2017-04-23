@@ -1,4 +1,4 @@
 package com.domingosuarez.bitso.client;
 
-public class Foo {
+public class Bitso {
 }
