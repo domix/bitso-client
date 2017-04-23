@@ -7,7 +7,7 @@ repositories {
 
 dependencies {
   api 'org.apache.commons:commons-math3:3.6.1'
-  compile 'com.bitso:bitso-java:3.0.3'
+  compile 'com.squareup.retrofit2:retrofit:2.3.0'
 
   implementation 'com.google.guava:guava:21.0'
 

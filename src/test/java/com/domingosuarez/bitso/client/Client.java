@@ -5,6 +5,6 @@ import org.junit.Test;
 public class Client {
   @Test
   public void testSomeLibraryMethod() {
-    
+
   }
 }
