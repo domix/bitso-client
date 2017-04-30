@@ -1,7 +1,10 @@
 package com.domingosuarez.bitso.client;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 
+@Data
 public class Book {
   private String name;
   private BigDecimal maxAmount;
