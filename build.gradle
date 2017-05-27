@@ -34,6 +34,8 @@ dependencies {
   compile 'org.projectlombok:lombok:1.16.18'
   compile 'com.squareup.retrofit2:retrofit:2.3.0'
   compile 'com.squareup.retrofit2:converter-jackson:2.3.0'
+  compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+  compile 'com.squareup.retrofit2:adapter-java8:2.3.0'
 
   implementation 'com.google.guava:guava:22.0'
 
