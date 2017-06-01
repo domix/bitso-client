@@ -20,7 +20,7 @@ public class Client {
     Call<AvailableBooks> availableBooksCall = bitso.availableBooks();
     AvailableBooks body = availableBooksCall.execute().body();
 
-    body.getPayload().forEach(System.out::println);
+    System.out.println(body);
   }
 
   @Test
@@ -28,7 +28,7 @@ public class Client {
     Call<TickerResult> ticker = bitso.ticker();
     TickerResult body = ticker.execute().body();
 
-    System.out.println(body.toString());
+    System.out.println(body);
   }
 
   @Test
@@ -36,6 +36,6 @@ public class Client {
     Call<SingleTickerResult> xrp_btc = bitso.tickerByBook("xrp_btc");
     SingleTickerResult body = xrp_btc.execute().body();
 
-    System.out.println(body.toString());
+    System.out.println(body);
   }
 }

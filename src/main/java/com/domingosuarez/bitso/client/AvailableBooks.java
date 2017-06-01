@@ -1,10 +1,14 @@
 package com.domingosuarez.bitso.client;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.util.List;
 
-@Data
+@Setter
+@Getter
+@ToString
 public class AvailableBooks {
   private List<Book> payload;
   private Boolean success;
