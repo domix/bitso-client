@@ -5,6 +5,8 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface Bitso {
+  String BASEURL_V3 = "https://api.bitso.com/v3/";
+
   @GET("available_books")
   Call<AvailableBooks> availableBooks();
 

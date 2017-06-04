@@ -10,9 +10,7 @@ public class BitsoInit {
   public Bitso init(String baseUrl) {
     Retrofit retrofit = new Retrofit.Builder()
       .baseUrl(baseUrl)
-      .addConverterFactory(
-        JacksonConverterFactory.create()
-      )
+      .addConverterFactory(JacksonConverterFactory.create())
       .addCallAdapterFactory(Java8CallAdapterFactory.create())
       .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
       .build();

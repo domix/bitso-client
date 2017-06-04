@@ -3,39 +3,48 @@ package com.domingosuarez.bitso.client;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import retrofit2.Call;
+import retrofit2.Response;
 
 import java.io.IOException;
 
+import static com.domingosuarez.bitso.client.Bitso.BASEURL_V3;
+import static org.junit.Assert.assertNotNull;
+
 public class Client {
+  private static final String NULL_BODY = "No se pudo obtener el body";
+
   private static Bitso bitso;
 
   @BeforeClass
   public static void setup() {
     bitso = new BitsoInit()
-      .init("https://api.bitso.com/v3/");
+      .init(BASEURL_V3);
   }
 
   @Test
   public void testAvailableBooks() throws IOException {
     Call<AvailableBooks> availableBooksCall = bitso.availableBooks();
-    AvailableBooks body = availableBooksCall.execute().body();
+    Response<AvailableBooks> response = availableBooksCall.execute();
+    AvailableBooks body = response.body();
 
-    System.out.println(body);
+    assertNotNull(NULL_BODY, body);
   }
 
   @Test
   public void testTicker() throws IOException {
     Call<TickerResult> ticker = bitso.ticker();
-    TickerResult body = ticker.execute().body();
+    Response<TickerResult> response = ticker.execute();
+    TickerResult body = response.body();
 
-    System.out.println(body);
+    assertNotNull(NULL_BODY, body);
   }
 
   @Test
   public void testSingleTicker() throws IOException {
     Call<SingleTickerResult> xrp_btc = bitso.tickerByBook("xrp_btc");
-    SingleTickerResult body = xrp_btc.execute().body();
+    Response<SingleTickerResult> response = xrp_btc.execute();
+    SingleTickerResult body = response.body();
 
-    System.out.println(body);
+    assertNotNull(NULL_BODY, body);
   }
 }
