@@ -37,7 +37,7 @@ dependencies {
   compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
   compile 'com.squareup.retrofit2:adapter-java8:2.3.0'
 
-  implementation 'com.google.guava:guava:22.0'
+  implementation 'com.google.guava:guava:23.0'
 
   testImplementation 'junit:junit:4.12'
 }
